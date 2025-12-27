@@ -6,13 +6,15 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:37:18 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 16:19:06 by khovakim         ###   ########.fr       */
+/*   Updated: 2025/12/27 16:49:37 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // ft_isalnum.c
 // Checks for alphanumeric characters: alphabetic ('A' to 'Z' and 'a' to 'z') and digit ('0' to '9').
 // Returns non-zero if c is an alphanumeric character, zero otherwise.
+//
+// Part of libft, a custom C standard library implementation.
 
 #include "ft_ctype.h"  // for ft_isalpha, ft_isdigit
 

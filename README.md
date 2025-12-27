@@ -1,6 +1,6 @@
 <details open>
 
-  <summary><h2>Utility functions</h2></summary>
+  <summary><h2>Ctype Module</h2></summary>
 
   Name | Prototype | Description
   --|--|--

@@ -95,7 +95,7 @@ OBJ =   $(patsubst %.c,$(OBJDIR)/%.o,$(filter %.c,$(SRC))) \
 		$(patsubst %.cpp,$(OBJDIR)/%.o,$(filter %.cpp,$(SRC)))
 
 # ===== Default target =====
-all: pretty $(EXE)
+all: $(EXE)
 
 # ===== Linking =====
 $(EXE) : $(OBJ)
@@ -123,12 +123,6 @@ $(OBJDIR)/%.o: %.cpp Makefile
 
 # ===== Auto-include dependency files =====
 -include $(OBJ:.o=.d)
-
-# ===== Run Program =====
-#.PHONY: run
-#run: all
-#	@echo "$(_WHITE)Running $(EXE)...$(_NC)"
-#	@./$(EXE)
 
 # ===== Cleaning =====
 .PHONY: clean
@@ -184,11 +178,62 @@ show_include_flags:
 
 .PHONY: show_link_flags
 show_link_flags:
-	@$(call PRINT,"Release Link Flags:","$(LDFLAGS))
+	@$(call PRINT,"Release Link Flags:","$(LDFLAGS)")
 
-# ===== Beautify output =====
-.PHONY: pretty
-pretty:
-	@echo "$(_CYAN)=============================$(_NC)"
-	@echo "$(_CYAN) Building $(NAME) Lib$(_NC)"
-	@echo "$(_CYAN)=============================$(_NC)"
+
+# =======================================
+# ============   Test   =================
+# =======================================
+
+TEST_NAME = test
+
+# ===== Test Directories =====
+TESTDIR      = unit_tests
+TEST_OBJDIR  = $(OBJDIR)/$(TESTDIR)
+TEST_EXE     = $(BINDIR)/$(TYPE)/$(TESTDIR)/$(TEST_NAME)
+
+# ===== Test Sources =====
+TEST_SRC = $(shell find $(TESTDIR) -type f \( -name "*.cpp" -o -name "*.cc" -o -name "*.c" \))
+
+# ===== Test Objects =====
+TEST_OBJ = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(TEST_SRC)))
+
+.PHONY: test
+test: all $(TEST_EXE)
+	@echo
+	@echo "$(_PURPLE)Running Tests...$(_NC)"
+	@./$(TEST_EXE)
+
+# Linking the Test Executable
+$(TEST_EXE): $(TEST_OBJ) $(EXE)
+	@mkdir -p $(@D)
+	@echo
+	@echo "$(_CYAN)Linking Test Executable...$(_NC)"
+	@$(CXX) $(CXXFLAGS) $(TEST_OBJ) -L$(dir $(EXE)) -lft $(LDFLAGS) -o $(TEST_EXE)
+	@echo "$(SUCCESS) Test suite ready!"
+
+# Generic rule for any object inside obj/release/unit_tests/
+$(OBJDIR)/unit_tests/%.cpp.o: unit_tests/%.cpp
+	@mkdir -p $(@D)
+	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CXX)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
+	@$(CXX) $(CXXFLAGS) $(IFLAGS) -c $< -o $@
+
+$(OBJDIR)/unit_tests/%.cc.o: unit_tests/%.cc
+	@mkdir -p $(@D)
+	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CXX)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
+	@$(CXX) $(CXXFLAGS) $(IFLAGS) -c $< -o $@
+
+$(OBJDIR)/unit_tests/%.c.o: unit_tests/%.c
+	@mkdir -p $(@D)
+	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CC)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
+	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
+
+.PHONY: test_clean
+test_clean:
+	@rm -rf $(TEST_OBJDIR)
+	@echo "$(_YELLOW)[-] Removed test object files$(_NC)"
+	@rm -rf $(TEST_EXE)
+	@echo "$(_RED)[x] Removed test executable$(_NC)"
+
+.PHONY: test_re
+test_re: test_clean test

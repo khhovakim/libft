@@ -1,5 +1,5 @@
-#ifndef __Color__
-#define __Color__
+#ifndef __Ft_Color__
+#define __Ft_Color__
 
 /// Reset
 static const char *const RESET = "\033[0m";
@@ -50,4 +50,4 @@ static const char *const BRIGHT_MAGENTA = "\033[0;95m";
 static const char *const BRIGHT_CYAN = "\033[0;96m";
 static const char *const BRIGHT_WHITE = "\033[0;97m";
 
-#endif // __Color__
+#endif // __Ft_Color__

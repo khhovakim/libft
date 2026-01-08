@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:37:18 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 16:49:37 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:02:04 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 //
 // Part of libft, a custom C standard library implementation.
 
-#include "ft_ctype.h"  // for ft_isalpha, ft_isdigit
+#include "libft/ctype/ctype.h" // for ft_isalpha, ft_isdigit
 
-int	ft_isalnum(int c)
+int ft_isalnum(int c)
 {
-	return ( ft_isalpha(c) || ft_isdigit(c) );
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

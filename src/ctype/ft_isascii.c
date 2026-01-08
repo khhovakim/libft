@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:45:43 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 16:50:33 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:02:33 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 // first character: NUL (0)
 // last character:  DEL (127)
 
-int	ft_isascii(int c)
+int ft_isascii(int c)
 {
-	return ( c >= 0 && c <= 127 );
+	return (c >= 0 && c <= 127);
 }

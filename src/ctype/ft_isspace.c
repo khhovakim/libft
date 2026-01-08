@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 17:10:06 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 17:14:18 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:02:27 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 // '\f' -> 12
 // '\r' -> 13
 
-int	ft_isspace(int c)
+int ft_isspace(int c)
 {
-	return ( c == ' ' || ( (unsigned)c - '\t' < 5) );
+	return (c == ' ' || ((unsigned)c - '\t' < 5));
 }

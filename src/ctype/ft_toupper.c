@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 13:47:43 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 17:27:56 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:01:29 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 // 'a' -> 97
 // 'z' -> 122
 
-#include "ft_ctype.h"  // for ft_islower
+#include "libft/ctype/ctype.h" // for ft_islower
 
-int	ft_toupper(int n)
+int ft_toupper(int n)
 {
-	return ( ft_islower(n) ? n - ('a' - 'A') : n );
+	return (ft_islower(n) ? n - ('a' - 'A') : n);
 }

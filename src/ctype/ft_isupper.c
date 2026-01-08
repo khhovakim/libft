@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 17:15:50 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 17:16:19 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:02:20 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //
 // Part of libft, a custom C standard library implementation.
 
-int	ft_isupper(int c)
+int ft_isupper(int c)
 {
-	return ( c >= 'A' && c <= 'Z' );
+	return (c >= 'A' && c <= 'Z');
 }

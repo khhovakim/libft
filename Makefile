@@ -28,6 +28,7 @@ _NC     = \033[0m
 
 SUCCESS   = $(_GREEN)SUCCESS[✔]$(_NC)
 COMPILING = $(_BLUE)COMPILING[●]$(_NC)
+WARNING   = $(_YELLOW)WARNING[⚠]$(_NC)
 
 # ===== Project =====
 NAME = libft.a
@@ -179,7 +180,6 @@ show_include_flags:
 .PHONY: show_link_flags
 show_link_flags:
 	@$(call PRINT,"Release Link Flags:","$(LDFLAGS)")
-
 
 # =======================================
 # ============   Test   =================

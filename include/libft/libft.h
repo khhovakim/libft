@@ -6,13 +6,16 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:37:04 by khovakim          #+#    #+#             */
-/*   Updated: 2025/12/27 17:23:17 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/08 18:50:43 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef   __LIBFT__
-# define  __LIBFT__
+#ifndef __LIB_FT__
+#define __LIB_FT__
 
-# include "ctype/ft_ctype.h"
+#include "ctype/ctype.h"
+#include "ftio/ftio.h"
+#include "string/string.h"
+#include "string/color.h"
 
-#endif // __LIBFT__
+#endif // __LIB_FT__

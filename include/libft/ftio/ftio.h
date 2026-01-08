@@ -56,6 +56,33 @@ extern "C"
 	 */
 	extern void ft_putnbr_fd(int n, int fd);
 
+	/**
+	 * @brief Outputs the character 'c' to the standard output.
+	 *
+	 * This function writes the character 'c' to the standard output (stdout).
+	 *
+	 * @param c The character to output.
+	 */
+	extern void ft_putchar(char c);
+
+	/**
+	 * @brief Outputs a string 's' to the standard output.
+	 *
+	 * This function writes the string 's' to the standard output (stdout).
+	 *
+	 * @param s The string to output.
+	 */
+	extern void ft_putstr(const char *s);
+
+	/**
+	 * @brief Outputs a string 's' followed by a newline to the standard output.
+	 *
+	 * This function writes the string 's' followed by a newline character to the standard output (stdout).
+	 *
+	 * @param s The string to output.
+	 */
+	extern void ft_puts(const char *s);
+
 #ifdef __cplusplus
 }
 #endif // __cplusplus

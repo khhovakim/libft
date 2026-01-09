@@ -6,12 +6,12 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:25:10 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/08 18:48:27 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:34:41 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_putnbr_fd.c
-// Outputs an integer 'n' to the given file descriptor 'fd'.
+// ft_putnbr_fd
+// Outputs an integer 'n' to the given file descriptor 'fd' with decimal representation.
 //
 // Part of the Libft library.
 

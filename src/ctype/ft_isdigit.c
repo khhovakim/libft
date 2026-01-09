@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:01:22 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/07 18:02:31 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:38:56 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_isdigit.c
+// ft_isdigit
 // Checks for a digit character ('0' to '9').
 // Returns non-zero if c is a digit character, zero otherwise.
 //

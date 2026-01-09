@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 15:20:39 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/07 18:02:35 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:38:48 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_isalpha.c
+// ft_isalpha
 // Checks for alphabetic characters: 'A' to 'Z' and 'a' to 'z'.
 // Returns non-zero if c is an alphabetic character, zero otherwise.
 //

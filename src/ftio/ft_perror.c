@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:56:33 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 13:27:42 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:35:10 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_perror.c
+// ft_perror
 // Outputs an error message to stderr.
 //
 // This function takes a string message as input and writes it to the standard error output (stderr).

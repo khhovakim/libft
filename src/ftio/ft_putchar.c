@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:54:56 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/08 19:00:20 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:35:02 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_putchar.c
+// ft_putchar
 // Outputs a character 'c' to the standard output.
 //
 // Part of libft Library

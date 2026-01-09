@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:57:59 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/08 19:00:22 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:34:45 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_puts.c
+// ft_puts
 // Outputs a string 's' followed by a newline to the standard output.
 //
 // Part of libft Library

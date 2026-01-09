@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:51:39 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/08 18:31:52 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:34:50 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_putstr_fd.c
+// ft_putstr_fd
 // This function writes a string to a file descriptor.
 // If the string is NULL, it does nothing.
 //

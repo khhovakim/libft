@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 17:10:06 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/07 18:02:27 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:39:17 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_isspace.c
+// ft_isspace
 // Checks for whitespace characters:
 // space, tab, newline, vertical tab, form feed, carriage return.
 // Returns non-zero if c is a whitespace character, zero otherwise.

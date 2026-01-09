@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:35:34 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/08 18:32:03 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:35:06 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_putchar_fd.c
+// ft_putchar_fd
 // Outputs the character 'c' to the given file descriptor 'fd'.
 // If the file descriptor is invalid, the function puts in stderr error message.
 //

@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 14:10:11 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/07 18:01:45 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:39:27 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_tolower.c
+// ft_tolower
 // Converts an uppercase letter to its lowercase equivalent.
 // If the character is not an uppercase letter, it is returned unchanged.
 //

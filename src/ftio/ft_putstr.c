@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:57:04 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/08 19:00:26 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:34:55 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_putstr.c
+// ft_putstr
 // Outputs a string 's' to the standard output.
 //
 // Part of libft Library

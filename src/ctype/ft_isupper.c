@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 17:15:50 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/07 18:02:20 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:39:22 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_isupper.c
+// ft_isupper
 // Checks for uppercase alphabetic characters (A-Z).
 // Returns non-zero if c is an uppercase letter, zero otherwise.
 //

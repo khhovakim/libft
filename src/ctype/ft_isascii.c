@@ -6,11 +6,11 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:45:43 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/07 18:02:33 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:38:51 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ft_isascii.c
+// ft_isascii
 // Checks whether c is a 7-bit unsigned char that fits into the ASCII character set.
 // Returns non-zero if c is an ASCII character, zero otherwise.
 //

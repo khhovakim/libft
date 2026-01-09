@@ -87,7 +87,7 @@ void toupper_test(UnitTest &ut)
 
 void test_ft_ctype_module()
 {
-	UnitTest ut("Ft_Ctype");
+	UnitTest ut{"Ft_Ctype"};
 
 	ut.add_test(isalpha_test);
 	ut.add_test(isdigit_test);

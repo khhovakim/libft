@@ -12,12 +12,12 @@ void UnitTest::test_result(std::string_view test_context, bool passed)
 
 	if (passed)
 	{
-		std::cout << BOLD_GREEN << "[ OK ] " << RESET << '\n';
+		std::cout << BOLD_GREEN << "[ OK ]" << RESET << '\n';
 		++_passed_count;
 	}
 	else
 	{
-		std::cout << BOLD_RED << "[FAIL] " << RESET << '\n';
+		std::cout << BOLD_RED << "[FAIL]" << RESET << '\n';
 		++_failed_count;
 	}
 }

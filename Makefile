@@ -46,12 +46,14 @@ CXX = g++
 AR  = ar rcs
 
 # ===== Flags =====
+MAKEFLAGS += --no-print-directory
 FLAGS    = -Wall -Wextra -Werror -pedantic-errors
 CFLAGS   = -std=c11   $(FLAGS)
 CXXFLAGS = -std=c++17 $(FLAGS)
 DEPFLAGS = -MMD -MP
 LDFLAGS  =
-IFLAGS   = $(foreach dir,$(INCDIRS),-I$(dir))
+IFLAGS   = -I$(INCDIR)
+# IFLAGS   = $(foreach dir,$(INCDIRS),-I$(dir))
 
 # ===== Source files =====
 SRC =   \
@@ -185,55 +187,20 @@ show_link_flags:
 # ============   Test   =================
 # =======================================
 
-TEST_NAME = test
-
-# ===== Test Directories =====
-TESTDIR      = unit_tests
-TEST_OBJDIR  = $(OBJDIR)/$(TESTDIR)
-TEST_EXE     = $(BINDIR)/$(TYPE)/$(TESTDIR)/$(TEST_NAME)
-
-# ===== Test Sources =====
-TEST_SRC = $(shell find $(TESTDIR) -type f \( -name "*.cpp" -o -name "*.cc" -o -name "*.c" \))
-
-# ===== Test Objects =====
-TEST_OBJ = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(TEST_SRC)))
 
 .PHONY: test
-test: all $(TEST_EXE)
+test: all
 	@echo
-	@echo "$(_PURPLE)Running Tests...$(_NC)"
-	@./$(TEST_EXE)
-
-# Linking the Test Executable
-$(TEST_EXE): $(TEST_OBJ) $(EXE)
-	@mkdir -p $(@D)
-	@echo
-	@echo "$(_CYAN)Linking Test Executable...$(_NC)"
-	@$(CXX) $(CXXFLAGS) $(TEST_OBJ) -L$(dir $(EXE)) -lft $(LDFLAGS) -o $(TEST_EXE)
-	@echo "$(SUCCESS) Test suite ready!"
-
-# Generic rule for any object inside obj/release/unit_tests/
-$(OBJDIR)/unit_tests/%.cpp.o: unit_tests/%.cpp
-	@mkdir -p $(@D)
-	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CXX)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
-	@$(CXX) $(CXXFLAGS) $(IFLAGS) -c $< -o $@
-
-$(OBJDIR)/unit_tests/%.cc.o: unit_tests/%.cc
-	@mkdir -p $(@D)
-	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CXX)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
-	@$(CXX) $(CXXFLAGS) $(IFLAGS) -c $< -o $@
-
-$(OBJDIR)/unit_tests/%.c.o: unit_tests/%.c
-	@mkdir -p $(@D)
-	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CC)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
-	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
+	@$(MAKE) TYPE=$(TYPE) run -C unit_tests
 
 .PHONY: test_clean
 test_clean:
-	@rm -rf $(TEST_OBJDIR)
-	@echo "$(_YELLOW)[-] Removed test object files$(_NC)"
-	@rm -rf $(TEST_EXE)
-	@echo "$(_RED)[x] Removed test executable$(_NC)"
+	@$(MAKE) clean -C unit_tests
+
+.PHONY: test_fclean
+test_fclean:
+	@$(MAKE) fclean -C unit_tests
 
 .PHONY: test_re
-test_re: test_clean test
+test_re:
+	@$(MAKE) re -C unit_tests

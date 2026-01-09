@@ -3,23 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khovakim <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 19:18:20 by khovakim          #+#    #+#             */
-/*   Updated: 2022/03/16 18:41:39 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:02:20 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+// ft_strlen.c
+// Custom implementation of strlen
+// Calculates the length of a string.
+//
+// This function iterates through the string until it finds the null terminator,
+// counting the number of characters along the way.
+//
+// Part of the Libft library.
+
+#include <stddef.h> // for size_t, NULL
+
+size_t ft_strlen(const char *s)
 {
-	size_t	count;
+	size_t len;
 
-	count = 0;
-	while (*s)
+	if (s == NULL)
 	{
-		count++;
-		s++;
+		return 0;
 	}
-	return (count);
+
+	len = 0;
+	while (s[len])
+	{
+		++len;
+	}
+
+	return len;
 }

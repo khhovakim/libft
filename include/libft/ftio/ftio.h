@@ -57,6 +57,15 @@ extern "C"
 	extern void ft_putnbr_fd(int n, int fd);
 
 	/**
+	 * @brief Outputs an integer 'n' to the standard output.
+	 *
+	 * This function writes the integer 'n' to the standard output (stdout) with decimal representation.
+	 *
+	 * @param n The integer to output.
+	 */
+	extern void ft_putnbr(int n);
+
+	/**
 	 * @brief Outputs the character 'c' to the standard output.
 	 *
 	 * This function writes the character 'c' to the standard output (stdout).

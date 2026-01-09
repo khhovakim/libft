@@ -1,6 +1,6 @@
 <details open>
 
-  <summary><h2>Utility functions</h2></summary>
+  <summary><h2>Ft_Ctype</h2></summary>
 
   Name | Prototype | Description
   --|--|--
@@ -20,7 +20,7 @@
 
 <details open>
 
-  <summary><h2>String functions</h2></summary>
+  <summary><h2>Ft_String</h2></summary>
 
   Name | Prototype | Description
   --|--|--
@@ -40,7 +40,7 @@
 
 <details open>
 
-  <summary><h2>Memory functions</h2></summary>
+  <summary><h2>Ft_IO</h2></summary>
 
   Name | Prototype | Description
   --|--|--

@@ -53,7 +53,6 @@ CXXFLAGS = -std=c++17 $(FLAGS)
 DEPFLAGS = -MMD -MP
 LDFLAGS  =
 IFLAGS   = -I$(INCDIR)
-# IFLAGS   = $(foreach dir,$(INCDIRS),-I$(dir))
 
 # ===== Source files =====
 SRC =   \

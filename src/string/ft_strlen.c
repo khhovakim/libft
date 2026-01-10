@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 19:18:20 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:38:36 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:14:34 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,12 @@
 
 size_t ft_strlen(const char *s)
 {
-	size_t len;
-
 	if (s == NULL)
 	{
 		return 0;
 	}
 
-	len = 0;
+	size_t len = 0;
 	while (s[len])
 	{
 		++len;

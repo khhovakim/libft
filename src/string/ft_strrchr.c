@@ -3,33 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khovakim <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 15:35:51 by khovakim          #+#    #+#             */
-/*   Updated: 2022/03/12 15:55:43 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:16:07 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*ptr;
-	int		len;
-	char	b;
+#include <stddef.h> // for NULL
 
-	len = 0;
-	ptr = (char *)s;
-	b = c;
-	while (*ptr)
+#include "libft/string/string.h" // for ft_strchr
+
+char *ft_strrchr(const char *s, int c)
+{
+	unsigned char *us = (unsigned char *)s;
+	if (us == NULL)
 	{
-		ptr++;
-		len++;
+		return NULL;
 	}
-	while (*ptr != b && len != 0)
+
+	unsigned char uc = (unsigned char)c;
+	unsigned char *last_occurrence = NULL;
+	while (*us)
 	{
-		ptr--;
-		len--;
+		if (*us == uc)
+		{
+			last_occurrence = us;
+		}
+		++us;
 	}
-	if (*ptr == b)
-		return (ptr);
-	return (0);
+
+	return last_occurrence
+			   ? (char *)last_occurrence
+			   : NULL;
 }

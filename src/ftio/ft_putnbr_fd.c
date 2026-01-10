@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:25:10 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:34:41 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:27:21 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void ft_putnbr_fd(int n, int fd)
 	}
 	else
 	{
-		ft_putchar_fd(n + '0', fd);
+		ft_putchar_fd((char)(n + '0'), fd);
 	}
 }

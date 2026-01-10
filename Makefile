@@ -60,6 +60,10 @@ SRC =   \
 		$(shell find $(SRCDIR) -type f -name "*.cc") \
 		$(shell find $(SRCDIR) -type f -name "*.cpp")
 
+# ===== Linter =====
+CLANG_TIDY = clang-tidy-12
+TIDY_FLAGS = --quiet
+
 # ===== Build type =====
 # r/R   = Release;
 # d/D   = Debug;
@@ -111,16 +115,19 @@ $(EXE) : $(OBJ)
 $(OBJDIR)/%.o: %.c Makefile
 	@mkdir -p $(@D)
 	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CC)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
+	@$(CLANG_TIDY) $(TIDY_FLAGS) $< -- $(IFLAGS) $(CFLAGS) 2>/dev/null || true
 	@$(CC) $(CFLAGS) $(DEPFLAGS) $(IFLAGS) -c $< -o $@
 
 $(OBJDIR)/%.o: %.cc Makefile
 	@mkdir -p $(@D)
 	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CXX)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
+	@$(CLANG_TIDY) $(TIDY_FLAGS) $< -- $(IFLAGS) $(CXXFLAGS) 2>/dev/null || true
 	@$(CXX) $(CXXFLAGS) $(DEPFLAGS) $(IFLAGS) -c $< -o $@
 
 $(OBJDIR)/%.o: %.cpp Makefile
 	@mkdir -p $(@D)
 	@echo "$(COMPILING) $(_WHITE)[$(_CYAN)$(CXX)$(_WHITE)][$(_PURPLE)$(TYPE)$(_WHITE)] [$(_YELLOW)$<$(_WHITE)] → $(_GREEN)$@$(_NC)"
+	@$(CLANG_TIDY) $(TIDY_FLAGS) $< -- $(IFLAGS) $(CXXFLAGS) 2>/dev/null || true
 	@$(CXX) $(CXXFLAGS) $(DEPFLAGS) $(IFLAGS) -c $< -o $@
 
 # ===== Auto-include dependency files =====
@@ -181,6 +188,11 @@ show_include_flags:
 .PHONY: show_link_flags
 show_link_flags:
 	@$(call PRINT,"Release Link Flags:","$(LDFLAGS)")
+
+
+.PHONY: lint
+lint:
+	@$(CLANG_TIDY) $(TIDY_FLAGS) $(SRC) -- $(IFLAGS) $(CFLAGS) 2>/dev/null || true
 
 # =======================================
 # ============   Test   =================

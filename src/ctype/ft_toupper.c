@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 13:47:43 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:39:33 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:43:03 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 #include "libft/ctype/ctype.h" // for ft_islower
 
-int ft_toupper(int n)
+int ft_toupper(int c)
 {
-	return (ft_islower(n) ? n - ('a' - 'A') : n);
+	return (ft_islower(c) ? c - ('a' - 'A') : c);
 }

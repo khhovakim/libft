@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:56:33 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:35:10 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:34:43 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ char *strerror(int errnum);
 
 void ft_perror(const char *message)
 {
-	ssize_t _;
-
 	if (message)
 	{
-		_ = write(STDERR_FILENO, BOLD_RED, ft_strlen(BOLD_RED));
-		_ = write(STDERR_FILENO, message, ft_strlen(message));
-		_ = write(STDERR_FILENO, RESET, ft_strlen(RESET));
-		_ = write(STDERR_FILENO, "\n", 1);
+		(void)!write(STDERR_FILENO, BOLD_RED, ft_strlen(BOLD_RED));
+		(void)!write(STDERR_FILENO, message, ft_strlen(message));
+		(void)!write(STDERR_FILENO, RESET, ft_strlen(RESET));
+		(void)!write(STDERR_FILENO, "\n", 1);
 	}
 
 	if (errno != 0)
@@ -43,12 +41,10 @@ void ft_perror(const char *message)
 		const char *error_message = strerror(errno);
 		if (error_message)
 		{
-			_ = write(STDERR_FILENO, BOLD_WHITE, ft_strlen(BOLD_WHITE));
-			_ = write(STDERR_FILENO, error_message, ft_strlen(error_message));
-			_ = write(STDERR_FILENO, RESET, ft_strlen(RESET));
-			_ = write(STDERR_FILENO, "\n", 1);
+			(void)!write(STDERR_FILENO, BOLD_WHITE, ft_strlen(BOLD_WHITE));
+			(void)!write(STDERR_FILENO, error_message, ft_strlen(error_message));
+			(void)!write(STDERR_FILENO, RESET, ft_strlen(RESET));
+			(void)!write(STDERR_FILENO, "\n", 1);
 		}
 	}
-
-	(void)_;
 }

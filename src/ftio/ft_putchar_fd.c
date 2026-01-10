@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:35:34 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:35:06 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:13:02 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,13 @@
 //
 // Part of the Libft library.
 
-#include <unistd.h> // for write, ssize_t
+#include <unistd.h> // for write
 
 #include "libft/ftio/ftio.h" // for ft_perror
 
 void ft_putchar_fd(char c, int fd)
 {
-	ssize_t bytes_written;
-
-	bytes_written = write(fd, &c, 1);
-	if (bytes_written == -1)
+	if (write(fd, &c, 1) == -1)
 	{
 		ft_perror("ft_putchar_fd: write error");
 	}

@@ -40,6 +40,33 @@ extern "C"
 	 */
 	extern char *ft_strchr(const char *s, int c);
 
+	/**
+	 * @brief Compares two strings up to a specified number of characters.
+	 *
+	 * This function compares the first `n` characters of the strings `s1` and `s2`.
+	 *
+	 * @param s1 The first string to compare.
+	 * @param s2 The second string to compare.
+	 * @param n The maximum number of characters to compare.
+	 * @return An integer less than, equal to, or greater than zero if `s1` is found,
+	 * respectively, to be less than, to match, or be greater than `s2`.
+	 */
+	extern int ft_strncmp(const char *s1, const char *s2, size_t n);
+
+	/**
+	 * @brief Compares two strings.
+	 *
+	 * This function compares the strings `s1` and `s2` until a null terminator
+	 * is found in either string, returning the difference between the first
+	 * differing characters.
+	 *
+	 * @param s1 The first string to compare.
+	 * @param s2 The second string to compare.
+	 * @return An integer less than, equal to, or greater than zero if `s1` is found,
+	 * respectively, to be less than, to match, or be greater than `s2`.
+	 */
+	extern int ft_strcmp(const char *s1, const char *s2);
+
 #ifdef __cplusplus
 }
 #endif // __cplusplus

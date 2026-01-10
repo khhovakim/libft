@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 15:19:58 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/10 19:14:16 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:12:32 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,11 @@ char *ft_strchr(const char *s, int c)
 {
 	unsigned char *us = (unsigned char *)s;
 	if (us == NULL)
-	{
 		return NULL;
-	}
 
 	unsigned char uc = (unsigned char)c;
 	while (*us && *us != uc)
-	{
 		++us;
-	}
 
 	return (*us == uc)
 			   ? (char *)us

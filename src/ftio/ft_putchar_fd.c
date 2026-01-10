@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:35:34 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/10 19:13:02 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:13:30 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@
 
 void ft_putchar_fd(char c, int fd)
 {
-	if (write(fd, &c, 1) == -1)
-	{
+	if (-1 == write(fd, &c, 1))
 		ft_perror("ft_putchar_fd: write error");
-	}
 }

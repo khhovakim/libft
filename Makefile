@@ -47,6 +47,7 @@ AR  = ar rcs
 
 # ===== Flags =====
 MAKEFLAGS += --no-print-directory
+
 FLAGS    = -Wall -Wextra -Werror -pedantic-errors
 CFLAGS   = -std=c11   $(FLAGS)
 CXXFLAGS = -std=c++17 $(FLAGS)
@@ -68,6 +69,8 @@ TIDY_FLAGS = --quiet
 # r/R   = Release;
 # d/D   = Debug;
 # as/AS = ASan;
+# make BUILD_TYPE=r/d/as
+# make -j[N] // -j$(nporc)
 
 BUILD_TYPE ?= r
 MODE := $(shell echo $(BUILD_TYPE) | tr '[:upper:]' '[:lower:]')

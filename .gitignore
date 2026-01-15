@@ -26,3 +26,4 @@ Thumbs.db
 .cache/
 .ccls-cache/
 .local/
+.replit

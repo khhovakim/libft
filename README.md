@@ -16,8 +16,7 @@ This is a C library project implementing common C standard library functions. It
 │   ├── ftio/          # I/O functions (putchar, putstr, etc.)
 │   └── string/        # String functions (strlen, strcmp, etc.)
 ├── unit_tests/        # Test suite
-├── Makefile           # Build configuration
-└── ft_*.c             # Root-level source files
+└── Makefile           # Build configuration
 ```
 
 ## Build Commands

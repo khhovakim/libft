@@ -41,8 +41,8 @@ OBJDIR_ROOT = obj
 BINDIR      = lib
 
 # ===== Compiler =====
-CC  = gcc
-CXX = g++
+CC  ?= cc
+CXX ?= c++
 AR  = ar rcs
 
 # ===== Flags =====

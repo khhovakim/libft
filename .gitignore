@@ -1,0 +1,27 @@
+# Object files
+*.o
+*.d
+obj/
+
+# Library output
+*.a
+lib/
+
+# Executables
+*.out
+bin/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Replit
+.cache/
+.local/

@@ -66,7 +66,21 @@ The "Build Library" workflow runs `make re && make test` to rebuild the library 
 
   Name | Prototype | Description
   --|--|--
-  [strlen](./src/string/ft_strlen.c)   | `size_t  ft_strlen(const char *s);` | _calculate the length of a string_
+  [strlen](./src/string/ft_strlen.c)     | `size_t  ft_strlen(const char *s);` | _calculate the length of a string_
+  [strchr](./src/string/ft_strchr.c)     | `char  *ft_strchr(const char *s, int c);` | _locate character in string_
+  [strrchr](./src/string/ft_strrchr.c)   | `char  *ft_strrchr(const char *s, int c);` | _locate character in string from end_
+  [strcmp](./src/string/ft_strcmp.c)     | `int  ft_strcmp(const char *s1, const char *s2);` | _compare two strings_
+  [strncmp](./src/string/ft_strncmp.c)   | `int  ft_strncmp(const char *s1, const char *s2, size_t n);` | _compare two strings with length limit_
+  [strdup](./ft_strdup.c)               | `char *ft_strdup(const char *s);` | _duplicate a string_
+  [strjoin](./ft_strjoin.c)             | `char *ft_strjoin(char const *s1, char const *s2);` | _concatenate two strings_
+  [strtrim](./ft_strtrim.c)             | `char *ft_strtrim(char const *s1, char const *set);` | _trim characters from beginning and end_
+  [split](./ft_split.c)                 | `char **ft_split(char const *s, char c);` | _split string into array using delimiter_
+  [substr](./ft_substr.c)               | `char *ft_substr(char const *s, unsigned int start, size_t len);` | _extract substring from string_
+  [strmapi](./ft_strmapi.c)             | `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));` | _apply function to each character with index_
+  [striteri](./ft_striteri.c)           | `void ft_striteri(char *s, void (*f)(unsigned int, char*));` | _apply function to each character with index (in-place)_
+  [strlcpy](./ft_strlcpy.c)             | `size_t ft_strlcpy(char *dst, const char *src, size_t size);` | _size-bounded string copying_
+  [strlcat](./ft_strlcat.c)             | `size_t ft_strlcat(char *dst, const char *src, size_t size);` | _size-bounded string concatenation_
+  [strnstr](./ft_strnstr.c)             | `char *ft_strnstr(const char *big, const char *little, size_t len);` | _locate a substring in a string with length limit_
 
 </details>
 

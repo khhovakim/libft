@@ -44,8 +44,8 @@ OBJDIR_ROOT  = obj
 BINDIR       = bin
 
 # ===== Compiler =====
-CC  = gcc
-CXX = g++
+CC  ?= cc
+CXX ?= c++
 AR  = ar rcs
 
 # ===== Flags =====

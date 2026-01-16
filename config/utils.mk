@@ -28,3 +28,37 @@ define PRINT
     done; \
     echo
 endef
+
+# =======================================
+# ==========   Show info   ==============
+# =======================================
+
+.PHONY: show
+show: show_src
+show: show_compilers
+show: show_flags
+show: show_include_flags
+show: show_link_flags
+
+.PHONY: show_src
+show_src:
+	@$(call PRINT,"Source Files:","$(SRC)")
+
+.PHONY: show_compilers
+show_compilers:
+	@$(call PRINT,"C Compilers:","$(CC)")
+	@$(call PRINT,"C++ Compilers:","$(CXX)")
+
+.PHONY: show_flags
+show_flags:
+	@$(call PRINT,"CFlags:","$(CFLAGS)")
+	@$(call PRINT,"CXXFlags:","$(CXXFLAGS)")
+
+.PHONY: show_include_flags
+show_include_flags:
+	@$(call PRINT,"Include Flags:","$(IFLAGS)")
+
+.PHONY: show_link_flags
+show_link_flags:
+	@$(call PRINT,"Link Flags:","$(LDFLAGS)")
+

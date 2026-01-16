@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:51:39 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:34:50 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:44:08 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,14 @@
 //
 // Part of the Libft library.
 
-#include <stddef.h> // for NULL
+#include <stddef.h>	 // for NULL
 
-#include "libft/ftio/ftio.h" // for ft_putstr_fd
+#include "libft/ftio/ftio.h"  // for ft_putstr_fd
 
-void ft_putstr_fd(const char *s, int fd)
-{
-	if (s == NULL)
-		return;
+void ft_putstr_fd(const char* s, int fd) {
+	if (s == NULL) return;
 
-	while (*s)
-	{
+	while (*s) {
 		ft_putchar_fd(*s, fd);
 		s++;
 	}

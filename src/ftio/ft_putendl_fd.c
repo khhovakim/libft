@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:09:42 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:34:59 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:43:52 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 //
 // Part of the Libft library.
 
-#include "libft/ftio/ftio.h" // for ft_putstr_fd
+#include "libft/ftio/ftio.h"  // for ft_putstr_fd
 
-void ft_putendl_fd(const char *s, int fd)
-{
+void ft_putendl_fd(const char* s, int fd) {
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

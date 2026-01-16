@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 17:17:18 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:39:03 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:42:51 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 //
 // Part of libft, a custom C standard library implementation.
 
-int ft_islower(int c)
-{
+int ft_islower(int c) {
 	return (c >= 'a' && c <= 'z');
 }

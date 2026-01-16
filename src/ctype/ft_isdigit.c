@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:01:22 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:38:56 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:42:49 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 //
 // Part of libft,  a custom C standard library implementation.
 
-int ft_isdigit(int c)
-{
+int ft_isdigit(int c) {
 	return (c >= '0' && c <= '9');
 }

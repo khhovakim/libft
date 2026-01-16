@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:53:21 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/09 18:39:11 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:42:53 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 // first character: space (32)
 // last character:  tilde (126)
 
-int ft_isprint(int c)
-{
+int ft_isprint(int c) {
 	return (c >= 32 && c <= 126);
 }

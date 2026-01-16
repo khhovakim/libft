@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 20:03:46 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/10 20:06:21 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:44:37 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@
 //
 // Part of the Libft library.
 
-#include "libft/string/string.h" // for ft_strlen, ft_strncmp
+#include "libft/string/string.h"  // for ft_strlen, ft_strncmp
 
-int ft_strcmp(const char *s1, const char *s2)
-{
+int ft_strcmp(const char* s1, const char* s2) {
 	return ft_strncmp(s1, s2, ft_strlen(s1) + 1);
 }

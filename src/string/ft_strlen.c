@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 19:18:20 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/10 20:16:28 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:44:45 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,13 @@
 //
 // Part of the Libft library.
 
-#include <stddef.h> // for size_t, NULL
+#include <stddef.h>	 // for size_t, NULL
 
-size_t ft_strlen(const char *s)
-{
-	if (s == NULL)
-		return 0;
+size_t ft_strlen(const char* s) {
+	if (s == NULL) return 0;
 
 	size_t len = 0ul;
-	while (s[len])
-	{
+	while (s[len]) {
 		++len;
 	}
 

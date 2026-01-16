@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 15:35:51 by khovakim          #+#    #+#             */
-/*   Updated: 2026/01/10 20:12:51 by khovakim         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:45:13 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,22 @@
 //
 // Part of the Libft library
 
-#include <stddef.h> // for NULL
+#include <stddef.h>	 // for NULL
 
-#include "libft/string/string.h" // for ft_strchr
+#include "libft/string/string.h"  // for ft_strchr
 
-char *ft_strrchr(const char *s, int c)
-{
-	unsigned char *us = (unsigned char *)s;
-	if (us == NULL)
-		return NULL;
+char* ft_strrchr(const char* s, int c) {
+	unsigned char* us = (unsigned char*)s;
+	if (us == NULL) return NULL;
 
 	unsigned char uc = (unsigned char)c;
-	unsigned char *last_occurrence = NULL;
-	while (*us)
-	{
-		if (*us == uc)
+	unsigned char* last_occurrence = NULL;
+	while (*us) {
+		if (*us == uc) {
 			last_occurrence = us;
-
+		}
 		++us;
 	}
 
-	return last_occurrence
-			   ? (char *)last_occurrence
-			   : NULL;
+	return last_occurrence ? (char*)last_occurrence : NULL;
 }

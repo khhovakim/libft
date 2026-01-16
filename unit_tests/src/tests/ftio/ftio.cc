@@ -1,29 +1,28 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <unistd.h>
-#include <fcntl.h>
-#include <iomanip>
-#include <vector>
-#include <climits>
-
 #include "libft/ftio/ftio.h"
-#include "libft/string/color.h"
 
+#include <fcntl.h>
+#include <unistd.h>
+
+#include <climits>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "libft/string/color.h"
 #include "unitTest.h"
 
-static const char *const filename = "io_test.txt";
+static const char* const filename = "io_test.txt";
 
-std::string read_test_file(const std::string &filename)
-{
+std::string read_test_file(const std::string& filename) {
 	std::ifstream ifs(filename);
-	if (!ifs.is_open())
-		return "ERROR_OPENING";
-	return std::string((std::istreambuf_iterator<char>(ifs)), std::istreambuf_iterator<char>());
+	if (!ifs.is_open()) return "ERROR_OPENING";
+	return std::string((std::istreambuf_iterator<char>(ifs)),
+					   std::istreambuf_iterator<char>());
 }
 
-void putchar_fd_test(UnitTest &ut)
-{
+void putchar_fd_test(UnitTest& ut) {
 	{
 		int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		ft_putchar_fd('A', fd);
@@ -35,8 +34,7 @@ void putchar_fd_test(UnitTest &ut)
 	ut.test_result("ft_putchar_fd: 'A'", res == "A");
 }
 
-void putstr_fd_test(UnitTest &ut)
-{
+void putstr_fd_test(UnitTest& ut) {
 	{
 		int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		ft_putstr_fd("Hello", fd);
@@ -71,8 +69,7 @@ void putstr_fd_test(UnitTest &ut)
 	}
 }
 
-void putendl_fd_test(UnitTest &ut)
-{
+void putendl_fd_test(UnitTest& ut) {
 	{
 		int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		ft_putendl_fd("Line", fd);
@@ -96,8 +93,7 @@ void putendl_fd_test(UnitTest &ut)
 	}
 }
 
-void putnbr_fd_test(UnitTest &ut)
-{
+void putnbr_fd_test(UnitTest& ut) {
 	{
 		int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		ft_putnbr_fd(42, fd);
@@ -154,8 +150,7 @@ void putnbr_fd_test(UnitTest &ut)
 	}
 }
 
-void test_ft_io_module()
-{
+void test_ft_io_module() {
 	UnitTest ut{"IO"};
 
 	ut.add_test(putchar_fd_test);

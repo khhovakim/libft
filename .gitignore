@@ -27,3 +27,10 @@ Thumbs.db
 .ccls-cache/
 .local/
 .replit
+
+# Tags
+tags
+
+# clang
+.clang-format
+.clang-tidy

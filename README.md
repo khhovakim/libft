@@ -15,10 +15,10 @@ This is a C library project implementing common C standard library functions. It
 │   ├── ctype/         # Character type functions (isalpha, isdigit, etc.)
 │   ├── ftio/          # I/O functions (putchar, putstr, etc.)
 │   └── string/        # String functions (strlen, strcmp, etc.)
-├── Makefile           # Main build file
-├── config.mk          # Build configuration (compilers, flags, etc.)
-├── utils.mk           # Helper macros and utilities
-└── ft_*.c             # Root-level source files
+├── config/            # configuration files
+│   ├── config.mk      # Build configuration (compilers, flags, etc.)
+│   ├── utils.mk       # Helper macros and utilities
+└── Makefile           # Main build file
 ```
 
 ## Build Commands
@@ -37,7 +37,7 @@ This is a C library project implementing common C standard library functions. It
 The "Build Library" workflow runs `make re` to rebuild the library.
 
 ## Dependencies
-- C compiler (gcc/clang)
+- C compiler (gcc/clang/cc)
 - GNU Make
 
 ## Function Reference

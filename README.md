@@ -15,15 +15,15 @@ This is a C library project implementing common C standard library functions. It
 │   ├── ctype/         # Character type functions (isalpha, isdigit, etc.)
 │   ├── ftio/          # I/O functions (putchar, putstr, etc.)
 │   └── string/        # String functions (strlen, strcmp, etc.)
-├── unit_tests/        # Test suite
-├── Makefile           # Build configuration
+├── Makefile           # Main build file
+├── config.mk          # Build configuration (compilers, flags, etc.)
+├── utils.mk           # Helper macros and utilities
 └── ft_*.c             # Root-level source files
 ```
 
 ## Build Commands
 - `make` - Build the library (creates `lib/release/libft.a`)
 - `make CC=clang` - Build using a specific compiler (e.g., clang)
-- `make test` - Build and run unit tests
 - `make re` - Clean and rebuild
 - `make clean` - Remove object files
 - `make fclean` - Remove object files and library
@@ -34,7 +34,7 @@ This is a C library project implementing common C standard library functions. It
 - `make BUILD_TYPE=as` - AddressSanitizer build
 
 ## Workflow
-The "Build Library" workflow runs `make re && make test` to rebuild the library and run all tests.
+The "Build Library" workflow runs `make re` to rebuild the library.
 
 ## Dependencies
 - C compiler (gcc/clang)
